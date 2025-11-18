@@ -11,16 +11,18 @@ class NoteItem extends StatelessWidget {
       padding: EdgeInsets.only(top: 24, left: 24, bottom: 24),
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       decoration: BoxDecoration(
-        color: note?.bgColor ?? Colors.white,
+        color:
+            note!.bgColor?.withValues(alpha: .8) ??
+            Colors.yellow.withValues(alpha: .8),
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: const Offset(0, 3),
-          ),
-        ],
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: note!.bgColor ?? Colors.orangeAccent.withValues(alpha: .6),
+        //     spreadRadius: 2,
+        //     blurRadius: 5,
+        //     offset: const Offset(0, 3),
+        //   ),
+        // ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
