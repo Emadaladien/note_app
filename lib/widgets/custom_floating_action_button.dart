@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/widgets/custome_text_field.dart';
+import 'package:note_app/widgets/add_note_button_sheet.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
   const CustomFloatingActionButton({super.key});
@@ -11,18 +11,13 @@ class CustomFloatingActionButton extends StatelessWidget {
       child: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            // backgroundColor: Colors.black54,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(16),
+            ),
             context: context,
             builder: (BuildContext context) {
-              return Container(
-                height: 400,
-                color: Colors.black,
-                child: Column(
-                  children: [
-                    CustomeTextField(title: 'Title'),
-                    CustomeTextField(title: 'Content', maxLines: 5),
-                  ],
-                ),
-              );
+              return AddNoteButtonSheet();
             },
           );
         },
