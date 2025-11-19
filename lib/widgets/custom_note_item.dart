@@ -3,7 +3,7 @@ import 'package:note_app/models/note_model.dart';
 import 'package:note_app/views/edite_note_view.dart';
 
 class NoteItem extends StatelessWidget {
-  NoteItem({super.key, this.note});
+  const NoteItem({super.key, this.note});
   final NoteModel? note;
 
   @override
@@ -21,7 +21,7 @@ class NoteItem extends StatelessWidget {
       },
       child: Container(
         padding: EdgeInsets.only(top: 24, left: 24, bottom: 24),
-        margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        margin: EdgeInsets.symmetric(vertical: 6, horizontal: 8),
         decoration: BoxDecoration(
           color:
               note!.bgColor?.withValues(alpha: .8) ??

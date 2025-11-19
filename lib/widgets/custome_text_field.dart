@@ -6,11 +6,11 @@ class CustomeTextField extends StatelessWidget {
     super.key,
     this.maxLines = 1,
     required this.title,
-    this.maxLength = 50,
+    // this.maxLength = 50,
   });
 
   final int maxLines;
-  final int maxLength;
+  // final int maxLength;
   final String title;
 
   @override
@@ -18,7 +18,7 @@ class CustomeTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: TextField(
-        maxLength: maxLength,
+        // maxLength: maxLength,
         maxLines: maxLines,
         cursorColor: KPrimaryColor,
         decoration: InputDecoration(
