@@ -32,12 +32,3 @@ class CustomFloatingActionButton extends StatelessWidget {
     );
   }
 }
-
-enum BoxHeightStyle {
-  tight, // Height tightly wraps the text
-  max, // Height covers the maximum line height
-  includeLineSpacingMiddle,
-  includeLineSpacingTop,
-  includeLineSpacingBottom,
-  strut, // Uses strut height
-}
