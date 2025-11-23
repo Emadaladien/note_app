@@ -23,9 +23,7 @@ class NoteItem extends StatelessWidget {
         padding: EdgeInsets.only(top: 24, left: 24, bottom: 24),
         margin: EdgeInsets.symmetric(vertical: 6, horizontal: 8),
         decoration: BoxDecoration(
-          color:
-              note!.bgColor?.withValues(alpha: .8) ??
-              Colors.yellow.withValues(alpha: .8),
+          color: note!.bgColor != null ? Color(note!.bgColor!) : Colors.white,
           borderRadius: BorderRadius.circular(16),
           // boxShadow: [
           //   BoxShadow(
@@ -66,9 +64,7 @@ class NoteItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
-                note != null
-                    ? '${note!.lastEdited!.month}/${note!.lastEdited!.day}/${note!.lastEdited!.year}'
-                    : '',
+                note != null ? '${note!.date}/${note!.date}/${note!.date}' : '',
                 style: const TextStyle(fontSize: 16, color: Colors.black54),
               ),
             ),
