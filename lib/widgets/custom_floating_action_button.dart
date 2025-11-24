@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/widgets/add_note_button_sheet.dart';
+import 'package:note_app/widgets/add_note_bottom_sheet.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
   const CustomFloatingActionButton({super.key});
@@ -17,7 +17,7 @@ class CustomFloatingActionButton extends StatelessWidget {
             ),
             context: context,
             builder: (BuildContext context) {
-              return AddNoteButtonSheet();
+              return AddNoteBottomSheet();
             },
           );
         },

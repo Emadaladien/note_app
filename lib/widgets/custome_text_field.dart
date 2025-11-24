@@ -6,25 +6,34 @@ class CustomeTextField extends StatelessWidget {
     super.key,
     this.maxLines = 1,
     required this.title,
+    this.onSaved,
     // this.maxLength = 50,
   });
 
   final int maxLines;
   // final int maxLength;
   final String title;
+  final void Function(String?)? onSaved;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: TextField(
-        // maxLength: maxLength,
+      child: TextFormField(
+        onSaved: onSaved,
+        validator: (value) {
+          if (value?.isEmpty ?? true) {
+            return 'Field is required';
+          } else {
+            return null;
+          }
+        },
         maxLines: maxLines,
         cursorColor: KPrimaryColor,
         decoration: InputDecoration(
           hintText: title,
           hintStyle: TextStyle(color: Colors.white70),
-          border: InputBorder.none,
+          border: OutlineInputBorder(),
           contentPadding: EdgeInsets.all(16),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: KPrimaryColor),

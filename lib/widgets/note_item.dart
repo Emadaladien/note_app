@@ -64,7 +64,7 @@ class NoteItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
-                note != null ? '${note!.date}/${note!.date}/${note!.date}' : '',
+                note != null ? '${note!.date}' : 'May 20, 2024',
                 style: const TextStyle(fontSize: 16, color: Colors.black54),
               ),
             ),

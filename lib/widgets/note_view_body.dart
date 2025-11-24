@@ -5,12 +5,19 @@ import 'package:note_app/widgets/note_list_view.dart';
 
 class NoteViewBody extends StatelessWidget {
   NoteViewBody({super.key});
+  Map<int, Color> colorsNote = {
+    1: Color.fromARGB(164, 168, 239, 27),
+    2: Color.fromARGB(148, 15, 15, 230),
+    3: Color.fromARGB(185, 227, 217, 24),
+    4: Color.fromARGB(202, 233, 141, 43),
+    5: Color.fromARGB(202, 65, 226, 218),
+  };
   List<NoteModel> notes = [
     NoteModel(
       title: 'Flutter Tips',
       content: 'Build your career with Emad aldin',
       date: DateTime.now().toString(),
-      bgColor: Colors.red.hashCode,
+      bgColor: 1,
     ),
     NoteModel(
       title: 'Sample Note 2',
