@@ -10,6 +10,6 @@ final class AddNoteLoading extends AddNoteState {}
 final class AddNoteSuccess extends AddNoteState {}
 
 final class AddNoteFailer extends AddNoteState {
-  final String errorMessage;
-  AddNoteFailer(this.errorMessage);
+  final String errMessage;
+  AddNoteFailer(this.errMessage);
 }
