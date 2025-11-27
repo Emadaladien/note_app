@@ -17,19 +17,19 @@ class NoteViewBody extends StatelessWidget {
       title: 'Flutter Tips',
       content: 'Build your career with Emad aldin',
       date: DateTime.now().toString(),
-      bgColor: 1,
+      bgColor: Colors.yellow.toARGB32(),
     ),
     NoteModel(
       title: 'Sample Note 2',
       content: 'This is the content of sample note 2.',
       date: DateTime.now().toString(),
-      bgColor: Colors.orangeAccent.hashCode,
+      bgColor: Colors.orangeAccent.toARGB32(),
     ),
     NoteModel(
       title: 'Sample Note 2',
       content: 'This is the content of sample note 2.',
       date: DateTime.now().toString(),
-      bgColor: Colors.white.hashCode,
+      bgColor: Colors.red.toARGB32(),
     ),
     NoteModel(
       title: 'Sample Note 2',

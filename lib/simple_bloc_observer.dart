@@ -1,35 +1,20 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SimpleBlocObserver implements BlocObserver {
   @override
-  void onEvent(Bloc bloc, Object? event) {
-    print('onEvent -- ${bloc.runtimeType}, $event');
-  }
-
-  @override
   void onChange(BlocBase bloc, Change change) {
-    debugPrint('onChange -- ${bloc.runtimeType}, $change');
-  }
-
-  @override
-  void onTransition(Bloc bloc, Transition transition) {
-    print('onTransition -- ${bloc.runtimeType}, $transition');
-  }
-
-  @override
-  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
-    print('onError -- ${bloc.runtimeType}, $error');
+    debugPrint('Change: ${bloc.runtimeType} $change');
   }
 
   @override
   void onClose(BlocBase bloc) {
-    // TODO: implement onClose
+    debugPrint('Close: ${bloc.runtimeType} $bloc');
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    // TODO: implement onCreate
+    debugPrint('Create: ${bloc.runtimeType} $bloc');
   }
 
   @override
@@ -40,5 +25,20 @@ class SimpleBlocObserver implements BlocObserver {
     StackTrace? stackTrace,
   ]) {
     // TODO: implement onDone
+  }
+
+  @override
+  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
+    // TODO: implement onError
+  }
+
+  @override
+  void onEvent(Bloc bloc, Object? event) {
+    // TODO: implement onEvent
+  }
+
+  @override
+  void onTransition(Bloc bloc, Transition transition) {
+    // TODO: implement onTransition
   }
 }
