@@ -6,11 +6,13 @@ class CustomeButton extends StatelessWidget {
     required this.title,
     this.icon = const Icon(Icons.add, color: Colors.black),
     this.onTap,
+    this.isLoading = false,
   });
 
   final String title;
   final Icon icon;
   final void Function()? onTap;
+  final bool isLoading;
 
   @override
   Widget build(BuildContext context) {
@@ -27,21 +29,27 @@ class CustomeButton extends StatelessWidget {
         alignment: Alignment.center,
         width: MediaQuery.of(context).size.width * 0.9,
         height: 50,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            icon,
-            SizedBox(width: 8),
-            Text(
-              title,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+        child: isLoading
+            ? SizedBox(
+                height: 26,
+                width: 26,
+                child: const CircularProgressIndicator(color: Colors.black),
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  icon,
+                  SizedBox(width: 8),
+                  Text(
+                    title,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ],
-        ),
       ),
     );
   }
